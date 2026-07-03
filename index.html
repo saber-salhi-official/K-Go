@@ -515,6 +515,74 @@ button:active{transform:scale(.97);filter:brightness(1.12);}
 .prem-sci{background:linear-gradient(135deg,#2a807a,#5fd6cb)!important;color:#04222b!important;}
 .libcat[style*="5fd6cb"]{box-shadow:0 0 0 1px rgba(95,214,203,.3),0 6px 18px -10px rgba(95,214,203,.5);}
 
+
+/* ============ ✦✦✦ التخصيص الشامل ✦✦✦ ============ */
+.pp-note{background:#13243a;border:1px solid var(--line);border-radius:11px;padding:10px 13px;font-size:.8rem;color:var(--mut);margin:8px 0 14px;}
+.pp-q{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:14px;margin:10px 0;}
+.pp-qt{font-size:.9rem;font-weight:700;color:var(--ink);margin-bottom:11px;display:flex;gap:9px;align-items:flex-start;line-height:1.55;}
+.pp-num{flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#a0438f,#7c6cd0);color:#fff;font-size:.78rem;display:flex;align-items:center;justify-content:center;font-weight:800;}
+.pp-opts{display:flex;flex-direction:column;gap:7px;}
+.pp-opt{text-align:right;border:1px solid var(--line);background:#12233a;color:var(--mut);border-radius:11px;padding:11px 13px;font-family:inherit;font-size:.82rem;cursor:pointer;transition:.15s;line-height:1.5;}
+.pp-opt:active{transform:scale(.99);}
+.pp-opt.on{background:linear-gradient(135deg,#3a2350,#2a3a6e);color:#fff;border-color:#7c6cd0;font-weight:700;}
+.pp-submit{width:100%;margin:12px 0 6px;border:none;border-radius:14px;padding:16px;font-family:inherit;font-weight:800;font-size:1rem;background:linear-gradient(135deg,#a0438f,#cf5b6a);color:#fff;cursor:pointer;box-shadow:0 8px 22px -10px #cf5b6a;}
+.pp-retake{width:100%;margin:16px 0 4px;border:1px solid var(--line);border-radius:13px;padding:13px;font-family:inherit;font-weight:800;font-size:.9rem;background:var(--card);color:var(--ink);cursor:pointer;}
+
+/* هيرو الملف */
+.pp-hero{display:flex;gap:13px;align-items:center;background:linear-gradient(160deg,#1b3450,#13263c);border:1px solid var(--line);border-radius:18px;padding:16px;margin:10px 0;box-shadow:var(--glow);}
+.pp-herobig{font-size:2.4rem;}
+.pp-herotx b{display:block;font-size:1rem;color:var(--accent);margin-bottom:6px;}
+.pp-chips{display:flex;flex-wrap:wrap;gap:6px;}
+.pp-chips span{font-size:.72rem;background:#22344d;color:var(--ink);border-radius:8px;padding:4px 9px;}
+.pp-explain{background:#13243a;border-right:4px solid var(--night);border-radius:12px;padding:13px 15px;font-size:.84rem;line-height:1.8;color:var(--ink);margin:10px 0;}
+.pp-explain b{color:var(--accent);}
+
+/* بطاقات الخطة */
+.pp-card{display:flex;gap:11px;align-items:center;background:linear-gradient(160deg,#182f49,#12233a);border:1px solid var(--line);border-radius:15px;padding:10px;margin:8px 0;cursor:pointer;transition:.15s;}
+.pp-card:active{transform:scale(.985);}
+.pp-card.done b{color:var(--done);}
+.pp-card.done{border-color:var(--done);}
+.pp-card img{width:82px;height:56px;object-fit:cover;border-radius:10px;border:1px solid var(--line);flex:0 0 82px;background:#10233b;}
+.pp-card.sm img{width:58px;height:42px;flex:0 0 58px;}
+.pp-cardtx{flex:1;min-width:0;}
+.pp-cardtx b{display:block;font-size:.86rem;}
+.pp-cardtx span{display:block;font-size:.72rem;color:var(--mut);margin-top:2px;line-height:1.45;}
+.pp-cardtx em{font-style:normal;font-size:.68rem;color:var(--accent);margin-top:3px;display:inline-block;}
+.pp-go{flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#a0438f,#cf5b6a);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.8rem;}
+.pp-skiptag{flex:0 0 auto;font-size:.68rem;color:var(--mut);border:1px solid var(--line);border-radius:8px;padding:4px 8px;}
+.pp-card.skip{opacity:.5;filter:grayscale(.6);cursor:default;}
+
+.pp-legend{display:flex;gap:8px;margin:6px 0 10px;flex-wrap:wrap;}
+.pp-tag{font-size:.7rem;border-radius:8px;padding:4px 10px;font-weight:700;}
+.pp-tag.core{background:rgba(95,214,203,.15);color:var(--accent);}
+.pp-tag.good{background:#22344d;color:var(--mut);}
+.pp-tag.skip{background:rgba(224,86,79,.12);color:#e8988f;}
+.pp-grouph{font-weight:800;font-size:.82rem;margin:14px 0 6px;padding-right:8px;border-right:3px solid var(--line);}
+.pp-grouph.core{color:var(--accent);border-color:var(--accent);}
+.pp-grouph.good{color:var(--mut);}
+.pp-grouph.skip{color:#e8988f;border-color:#7a3a36;}
+
+/* وسوم fit في المكتبة */
+.fitchip{font-style:normal;font-size:.66rem!important;border-radius:7px;padding:2px 7px;}
+.fitchip.core{background:rgba(95,214,203,.18)!important;color:var(--accent)!important;}
+.fitchip.skip{background:rgba(224,86,79,.12)!important;color:#e8988f!important;}
+.libcard.fit-core{border-color:rgba(95,214,203,.5);}
+.libcard.fit-skip{opacity:.62;}
+
+/* تحليل حيّ */
+.pp-ai{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:8px 0;}
+.pp-ai p{font-size:.8rem;color:var(--mut);margin:0 0 10px;line-height:1.6;}
+.pp-aibtn{width:100%;border:none;border-radius:12px;padding:13px;font-family:inherit;font-weight:800;font-size:.9rem;background:linear-gradient(135deg,#2c6e4a,#3fb0a6);color:#fff;cursor:pointer;}
+.pp-aiload{font-size:.82rem;color:var(--accent);padding:12px;text-align:center;}
+.pp-aitext{background:#13243a;border-right:4px solid var(--accent);border-radius:11px;padding:13px 15px;font-size:.84rem;line-height:1.85;color:var(--ink);margin-top:10px;}
+.pp-aidate{font-size:.68rem;color:var(--mut);text-align:left;margin-top:6px;}
+.pp-aierr{background:#2a1614;border:1px solid #7a3a36;border-radius:11px;padding:12px;font-size:.8rem;color:#ff9b91;margin-top:10px;line-height:1.6;}
+
+/* أزرار لوحة الأدوات */
+.prem-deep{background:linear-gradient(135deg,#a0438f,#cf5b6a)!important;position:relative;}
+.prem-plan{background:linear-gradient(135deg,#3a2350,#7c6cd0)!important;position:relative;}
+.pp-dot{display:none;position:absolute;top:10px;left:12px;width:11px;height:11px;border-radius:50%;background:#5fd6cb;box-shadow:0 0 0 3px rgba(95,214,203,.3);animation:wkp 1.4s infinite;}
+
 </style></head>
 <body>
 <!-- LOCK SCREEN -->
@@ -560,6 +628,8 @@ button:active{transform:scale(.97);filter:brightness(1.12);}
 <button id="remindBtn" style="width:100%;margin-top:8px;border:1px solid var(--line);border-radius:13px;padding:13px;font-weight:800;font-family:inherit;font-size:.9rem;background:var(--card);color:var(--ink);cursor:pointer;">🔔 التذكيرات</button>
 <div style="display:flex;gap:8px;margin-top:8px;"><button id="exportBtn" style="flex:1;border:1px solid var(--line);border-radius:13px;padding:13px;font-weight:800;font-family:inherit;font-size:.86rem;background:var(--card);color:var(--ink);cursor:pointer;">📤 نسخة احتياطية</button><button id="importBtn" style="flex:1;border:1px solid var(--line);border-radius:13px;padding:13px;font-weight:800;font-family:inherit;font-size:.86rem;background:var(--card);color:var(--ink);cursor:pointer;">📥 استرجاع نسخة</button></div>
 <input type="file" id="importFile" accept=".json,application/json" style="display:none">
+<button id="deepBtn" class="prem-btn prem-deep">🧬 خصّص برنامجي (تقييم شامل يعيد تشكيل كل شيء)<span id="planDot2" class="pp-dot"></span></button>
+<button id="planBtn" class="prem-btn prem-plan">🎯 برنامجي المخصّص (خطة اليوم + مكتبتك مرتّبة)<span id="planDot" class="pp-dot"></span></button>
 <button id="sciBtn" class="prem-btn prem-sci">🔬 القسم العلمي (بروتوكولات مثبتة + ماذا تتوقّع)</button>
 <button id="weeklyBtn" class="prem-btn prem-weekly">🗓️ تقييمي الأسبوعي (يعدّل برنامجك تلقائياً)<span id="weeklyDot" class="wk-dot"></span></button>
 <button id="voiceBtn" class="prem-btn prem-voice">🔊 الصوت الإرشادي</button>
@@ -568,7 +638,7 @@ button:active{transform:scale(.97);filter:brightness(1.12);}
 <button id="pinBtn" onclick="window.changePIN&&window.changePIN()" style="width:100%;margin-top:8px;border:1px solid var(--line);border-radius:13px;padding:13px;font-weight:800;font-family:inherit;font-size:.92rem;background:var(--card);color:var(--ink);cursor:pointer;">🔒 تغيير الرمز السرّي</button>
 <button id="panelBtn" style="width:100%;margin-top:8px;border:none;border-radius:13px;padding:14px;font-weight:800;font-family:inherit;font-size:.95rem;background:linear-gradient(135deg,#3a51b0,#6a5fd6);color:#fff;cursor:pointer;">🎛️ لوحة التحكّم (عدّل برنامجك متى شئت)</button>
 <button id="resetBtn" style="width:100%;margin-top:8px;border:1px solid #7a3a36;border-radius:13px;padding:13px;font-weight:800;font-family:inherit;font-size:.92rem;background:#2a1614;color:#ff9b91;cursor:pointer;">🗑️ تفريغ كل البيانات والبدء من جديد</button>
-<div style="text-align:center;margin-top:10px;font-size:.72rem;color:#5a6e80;">نسخة التطبيق: 2026-07 — البريميوم+ (علمي + رسوم تشريحية + تقنيات متقدّمة)</div>
+<div style="text-align:center;margin-top:10px;font-size:.72rem;color:#5a6e80;">نسخة التطبيق: 2026-07 — المخصّصة بالكامل (تقييم شامل يعيد تشكيل كل شيء)</div>
 </div>
 
 <div class="progress-top"><div class="pf" id="pf"></div></div>
@@ -597,6 +667,16 @@ button:active{transform:scale(.97);filter:brightness(1.12);}
 </div>
 
 <div id="appBanner"></div>
+<!-- DEEP ASSESS OVERLAY -->
+<div class="overlay" id="deepOverlay">
+  <div class="ov-top"><button class="back" id="deepBack">‹ رجوع</button><div class="ov-title">🧬 التقييم الشامل</div><div style="width:64px"></div></div>
+  <div style="overflow-y:auto;padding-bottom:24px;" id="deepBody"></div>
+</div>
+<!-- MY PLAN OVERLAY -->
+<div class="overlay" id="planOverlay">
+  <div class="ov-top"><button class="back" id="planBack">‹ رجوع</button><div class="ov-title">🎯 برنامجي المخصّص</div><div style="width:64px"></div></div>
+  <div style="overflow-y:auto;padding-bottom:24px;" id="planBody"></div>
+</div>
 <!-- SCIENCE OVERLAY -->
 <div class="overlay" id="sciOverlay">
   <div class="ov-top"><button class="back" id="sciBack">‹ رجوع</button><div class="ov-title">🔬 القسم العلمي</div><div style="width:64px"></div></div>
@@ -1891,6 +1971,230 @@ Object.assign(FLOWS,{
  try{SEXLIB.intro=SEXLIB.intro.replace('22 تمريناً','26 تمريناً');}catch(e){}
 })();
 
+
+/* ===== PREM3: DEEP ASSESS ===== */
+/* ============================================================
+   ✦✦✦ التخصيص الشامل — التقييم العميق (17 سؤالاً) ✦✦✦
+   ينتج ملفاً متعدّد الأبعاد: نمط القاع، المحرّك الأساسي،
+   الأولويات، عوامل نمط الحياة، ومستوى الخبرة.
+   ============================================================ */
+const DEEP={
+ intro:"تقييم شامل مرّة واحدة (≈3 دقائق). كل إجابة تعيد تشكيل برنامجك بالكامل: أيّ تمارين تظهر أولاً، أيّها يُخفى أو يُعلّم «ليس لنمطك»، وما التركيز والجرعة. كن صادقاً تماماً — لا أحد يرى هذا غيرك، والصدق وحده يصنع الدقّة.",
+ note:"لا إجابة صحيحة أو خاطئة. اختر الأقرب لواقعك.",
+ /* كل إجابة: أوزان على أبعاد متعدّدة.
+    dims: tight/weak (نمط القاع)، pe (سرعة قذف)، ed (انتصاب)،
+    ctrl (تحكّم)، stress، flow (تدفّق/لياقة)، exp (خبرة) */
+ q:[
+ {id:"d1",t:"عند شدّ عضلة قاع الحوض (كمن يوقف بوله)، ما إحساسك؟",
+  a:[{t:"أشدّها بصعوبة وتُفلت فوراً",d:{weak:3}},
+     {t:"أشدّها لكن يصعب إرخاؤها تماماً بعدها",d:{tight:3}},
+     {t:"أشدّ وأرخي بسهولة وتحكّم",d:{}},
+     {t:"لا أكاد أحسّ بها",d:{weak:4}}]},
+ {id:"d2",t:"شدّ أو ألم أو ضغط في العِجان (بين الخصيتين والشرج) أو أسفل البطن؟",
+  a:[{t:"نعم، شدّ أو انزعاج متكرّر",d:{tight:4}},
+     {t:"أحياناً بعد جلوس طويل",d:{tight:2}},
+     {t:"نادراً",d:{}},
+     {t:"أبداً",d:{weak:1}}]},
+ {id:"d3",t:"سرعة القذف عندك:",
+  a:[{t:"أقذف بسرعة شديدة وبأقلّ إثارة",d:{pe:4,tight:2}},
+     {t:"أسرع ممّا أريد مع تحكّم جزئي",d:{pe:3,ctrl:2}},
+     {t:"مقبول لكن أريد إطالته",d:{pe:1,ctrl:1}},
+     {t:"لا أعاني من سرعة القذف",d:{}}]},
+ {id:"d4",t:"كم تقريباً تدوم قبل القذف عادةً؟",
+  a:[{t:"أقلّ من دقيقة",d:{pe:4}},
+     {t:"1–3 دقائق",d:{pe:2}},
+     {t:"3–7 دقائق",d:{pe:1}},
+     {t:"أكثر من 7 دقائق",d:{}}]},
+ {id:"d5",t:"الانتصاب الصباحي (عند الاستيقاظ):",
+  a:[{t:"ضعيف أو غائب غالباً",d:{ed:4,weak:1}},
+     {t:"موجود لكن أضعف من قبل",d:{ed:2}},
+     {t:"طبيعي ومنتظم",d:{}},
+     {t:"قوي ومنتظم",d:{}}]},
+ {id:"d6",t:"صلابة الانتصاب وثباته أثناء العلاقة:",
+  a:[{t:"يضعف أو يخبو قبل الانتهاء",d:{ed:4}},
+     {t:"جيّد لكن يحتاج تركيزاً للحفاظ عليه",d:{ed:2}},
+     {t:"ثابت غالباً",d:{}},
+     {t:"قوي وثابت دائماً",d:{}}]},
+ {id:"d7",t:"قدرتك على «التوقّف قبل نقطة اللاعودة»:",
+  a:[{t:"لا أشعر بها إلا بعد فوات الأوان",d:{ctrl:4,pe:2}},
+     {t:"أشعر بها لكن يصعب التوقّف",d:{ctrl:3}},
+     {t:"أتحكّم أحياناً",d:{ctrl:1}},
+     {t:"أتحكّم جيّداً",d:{}}]},
+ {id:"d8",t:"مستوى التوتر/الضغط النفسي في حياتك اليومية:",
+  a:[{t:"مرتفع جداً ومزمن",d:{stress:4,tight:1}},
+     {t:"مرتفع أحياناً",d:{stress:2}},
+     {t:"معتدل",d:{stress:1}},
+     {t:"منخفض ومسترخٍ",d:{}}]},
+ {id:"d9",t:"قلق الأداء (التفكير الزائد/الخوف من الفشل أثناء العلاقة):",
+  a:[{t:"كثير — يشغل ذهني ويفسد اللحظة",d:{stress:4,ctrl:1}},
+     {t:"أحياناً",d:{stress:2}},
+     {t:"نادراً",d:{}},
+     {t:"لا أعاني منه",d:{}}]},
+ {id:"d10",t:"نومك عادةً:",
+  a:[{t:"قليل ومتقطّع (أقلّ من 6 ساعات)",d:{ed:2,stress:1,flow:1}},
+     {t:"متوسّط (6–7 ساعات)",d:{flow:1}},
+     {t:"كافٍ ومريح (7–8 ساعات)",d:{}},
+     {t:"ممتاز ومنتظم",d:{}}]},
+ {id:"d11",t:"نشاطك البدني الأسبوعي:",
+  a:[{t:"جالس أغلب الوقت، بلا رياضة",d:{flow:4,ed:1}},
+     {t:"حركة خفيفة أحياناً",d:{flow:2}},
+     {t:"رياضة 1–2 مرّة أسبوعياً",d:{flow:1}},
+     {t:"نشيط ومنتظم 3+ مرّات",d:{}}]},
+ {id:"d12",t:"دهون البطن ومحيط الخصر:",
+  a:[{t:"كثيرة — كرش واضح",d:{flow:3,ed:1}},
+     {t:"متوسطة",d:{flow:1}},
+     {t:"قليلة",d:{}},
+     {t:"جسم رياضي",d:{}}]},
+ {id:"d13",t:"التدخين أو الكحول:",
+  a:[{t:"أدخّن بانتظام",d:{ed:2,flow:1}},
+     {t:"أحياناً/اجتماعياً",d:{flow:1}},
+     {t:"أقلعت مؤخراً",d:{}},
+     {t:"لا شيء منهما",d:{}}]},
+ {id:"d14",t:"خبرتك بتمارين قاع الحوض (كيجل) قبل هذا التطبيق:",
+  a:[{t:"لم أسمع بها/لم أجرّبها",d:{exp:0}},
+     {t:"جرّبت قليلاً بلا انتظام",d:{exp:1}},
+     {t:"أمارسها من فترة",d:{exp:2}},
+     {t:"متمرّس وأريد مستوى متقدّماً",d:{exp:3}}]},
+ {id:"d15",t:"هدفك الأول الآن (الأهمّ):",
+  a:[{t:"إطالة الوقت/تأخير القذف",d:{pe:2}},
+     {t:"انتصاب أقوى وأثبت",d:{ed:2}},
+     {t:"تحكّم وثقة أكبر عموماً",d:{ctrl:2}},
+     {t:"لياقة عامة وصحة الحوض",d:{flow:1}}]},
+ {id:"d16",t:"منذ متى تلاحظ هذه المشكلة؟",
+  a:[{t:"طوال حياتي الجنسية",d:{}},
+     {t:"منذ سنوات",d:{}},
+     {t:"ظهرت مؤخراً (أشهر)",d:{ed:1}},
+     {t:"متقطّعة حسب الظرف",d:{stress:2}}]},
+ {id:"d17",t:"كم دقيقة واقعياً تقدر تخصّص يومياً للتمارين؟",
+  a:[{t:"5 دقائق فقط",d:{time:1}},
+     {t:"10 دقائق",d:{time:2}},
+     {t:"15–20 دقيقة",d:{time:3}},
+     {t:"أكثر من 20 دقيقة",d:{time:4}}]}
+ ]
+};
+
+/* حساب الملف الشامل من الإجابات */
+function computeDeep(){
+ const ans=DATA.deepAns||{};
+ const S={tight:0,weak:0,pe:0,ed:0,ctrl:0,stress:0,flow:0,exp:0,time:2};
+ DEEP.q.forEach(q=>{const ai=ans[q.id];if(ai==null)return;const a=q.a[ai];if(!a||!a.d)return;
+  Object.keys(a.d).forEach(k=>{S[k]=(S[k]||0)+a.d[k];});});
+ /* نمط القاع */
+ let floor;
+ if(S.tight>=S.weak+2)floor='tight';
+ else if(S.weak>=S.tight+2)floor='weak';
+ else floor='mixed';
+ /* المحرّك الأساسي: أعلى بُعد مشكلة */
+ const drivers=[['pe',S.pe],['ed',S.ed],['ctrl',S.ctrl]].sort((a,b)=>b[1]-a[1]);
+ const primary=drivers[0][1]>0?drivers[0][0]:'ctrl';
+ /* مستوى الخبرة */
+ const level=S.exp>=3?'adv':(S.exp>=1?'inter':'beg');
+ /* عوامل نمط الحياة المؤثّرة */
+ const lifestyle=[];
+ if(S.stress>=4)lifestyle.push('stress');
+ if(S.flow>=4)lifestyle.push('sedentary');
+ if(S.ed>=4)lifestyle.push('circulation');
+ const prof={
+  key:floor, floor:floor, primary:primary, level:level,
+  scores:S, lifestyle:lifestyle, time:S.time||2,
+  ts:Date.now()
+ };
+ DATA.deepProfile=prof;
+ /* حافظ على التوافق مع النظام القديم */
+ if(typeof ASSESS!=='undefined'&&ASSESS.results){DATA.profile=ASSESS.results[floor]||ASSESS.results.mixed;}
+ persist();
+ return prof;
+}
+function deepProfile(){return DATA.deepProfile||null;}
+
+/* ===== PREM3: ENGINE ===== */
+/* ============================================================
+   ✦✦✦ التخصيص الشامل — محرّك إعادة التشكيل (أوفلاين) ✦✦✦
+   يأخذ الملف ويصنّف كل تمرين: أساسي / مفيد / ليس لنمطك،
+   ويبني خطة يومية وشرحاً مفهوماً.
+   ============================================================ */
+
+/* تصنيف تمرين لنمط المستخدم: 'core' | 'good' | 'skip' */
+function flowFitFor(key,prof){
+ if(!prof)return 'good';
+ const f=FLOWS[key];if(!f)return 'good';
+ const cat=f.cat;                 /* قوة/إرخاء/تحكّم/تدفّق */
+ const floor=prof.floor, primary=prof.primary, ls=prof.lifestyle||[];
+ /* قواعد نمط القاع (الأهمّ) */
+ if(floor==='tight'){
+  /* المشدود: الإرخاء أساسي، والكيجل التقوية قد يضرّه */
+  if(key==='reverse_kegel')return 'core';
+  if(cat==='إرخاء')return 'core';
+  if(cat==='تحكّم')return 'good';
+  /* تمارين تقوية قاع الحوض الصرفة ليست أولوية للمشدود */
+  if(['pf_slow','pf_fast','max_endurance','kegel_elevator','kegel_quick'].indexOf(key)>=0)return 'skip';
+ }
+ if(floor==='weak'){
+  if(['pf_slow','pf_fast','pf_standing','max_endurance','bridge_kegel','kegel_elevator'].indexOf(key)>=0)return 'core';
+  if(cat==='قوة')return 'core';
+  /* الإرخاء العكسي غير مناسب للضعيف */
+  if(key==='reverse_kegel')return 'skip';
+ }
+ /* المحرّك الأساسي */
+ if(primary==='pe'&&(cat==='تحكّم'||['sphincter_control','edging_ladder','sync_breath_squeeze','breath_diaphragm'].indexOf(key)>=0))return 'core';
+ if(primary==='ed'&&(cat==='تدفّق'||['pf_standing','bloodpump','wall_sit','side_lunge'].indexOf(key)>=0))return 'core';
+ if(primary==='ctrl'&&(cat==='تحكّم'))return 'core';
+ /* نمط الحياة */
+ if(ls.indexOf('circulation')>=0&&cat==='تدفّق')return 'core';
+ if(ls.indexOf('stress')>=0&&(key==='b478'||key==='breath_diaphragm'))return 'core';
+ return 'good';
+}
+
+/* رتّب المكتبة: أساسي أولاً، ثم مفيد، ثم ليس لنمطك (لا يُحذف بل يُعلّم) */
+function personalizedLib(prof){
+ const groups={core:[],good:[],skip:[]};
+ const seen={};
+ SEXLIB.cats.forEach(c=>c.items.forEach(k=>{if(seen[k])return;seen[k]=1;groups[flowFitFor(k,prof)].push(k);}));
+ return groups;
+}
+
+/* بناء خطة اليوم المخصّصة (2–4 تمارين حسب الوقت المتاح) */
+function personalDailyPlan(prof){
+ if(!prof)return null;
+ const g=personalizedLib(prof);
+ const time=prof.time||2;
+ const n=time<=1?2:(time===2?3:4);
+ const pick=[];
+ /* الأولوية للأساسي المتنوّع الفئات */
+ const byCat={};
+ g.core.forEach(k=>{const c=FLOWS[k].cat;(byCat[c]=byCat[c]||[]).push(k);});
+ const catOrder = prof.floor==='tight' ? ['إرخاء','تحكّم','تدفّق','قوة']
+                : prof.primary==='ed' ? ['تدفّق','قوة','تحكّم','إرخاء']
+                : prof.primary==='pe' ? ['تحكّم','قوة','إرخاء','تدفّق']
+                : ['قوة','تحكّم','تدفّق','إرخاء'];
+ catOrder.forEach(c=>{if(pick.length<n&&byCat[c]&&byCat[c].length)pick.push(byCat[c].shift());});
+ /* أكمل من الأساسي ثم المفيد */
+ g.core.concat(g.good).forEach(k=>{if(pick.length<n&&pick.indexOf(k)<0)pick.push(k);});
+ return pick.slice(0,n);
+}
+
+/* شرح مفهوم لِمَ هذا برنامجك */
+function explainProfile(prof){
+ if(!prof)return '';
+ const floorTxt={
+  tight:"قاع حوضك يميل إلى <b>الشدّ الزائد (التوتّر)</b> — وهذا سبب شائع جداً لسرعة القذف يُغفَل عنه. الحلّ ليس مزيداً من الكيجل (يزيد الطين بلّة) بل <b>الإرخاء العكسي والإطالة والتنفّس</b>. لهذا رفعنا تمارين الإرخاء لأعلى القائمة وأخفينا تمارين التقوية الصرفة عن أولوياتك.",
+  weak:"قاع حوضك يميل إلى <b>الضعف</b> — يحتاج بناء قوة وتحمّل. رفعنا بروتوكولات التقوية (الألياف البطيئة والسريعة، الوقوف، الجسر) لأعلى القائمة، وأبعدنا الإرخاء العكسي لأنه ليس لنمطك الآن.",
+  mixed:"نمطك <b>مختلط</b> — يحتاج توازناً بين التقوية والإرخاء. وازنّا برنامجك بين الاثنين مع تركيز على التحكّم والتنفّس."
+ };
+ const primeTxt={
+  pe:"محرّكك الأساسي هو <b>سرعة القذف</b>، لذا قدّمنا تمارين التحكّم العصبي (توقّف-ابدأ + المصرّة، سلّم الإثارة، تزامن التنفّس).",
+  ed:"محرّكك الأساسي هو <b>قوة/ثبات الانتصاب</b>، لذا قدّمنا تمارين التدفّق الدموي والوقوف — الأقوى أثراً على الأوعية.",
+  ctrl:"محرّكك الأساسي هو <b>التحكّم والثقة</b>، لذا ركّزنا على مهارات الكبح والتنفّس المهدّئ."
+ };
+ const lvlTxt={beg:"بدأناك بمستوى <b>مبتدئ آمن</b> — أساسيات نظيفة قبل الشدّة.",inter:"مستواك <b>متوسّط</b> — مزجنا الأساسي بتقنيات أعمق.",adv:"مستواك <b>متقدّم</b> — أتحنا لك التقنيات المتقدّمة كاملة."};
+ let ls='';
+ if(prof.lifestyle&&prof.lifestyle.length){
+  const map={stress:"توتّرك المرتفع يفاقم المشكلة — أضفنا تنفّساً مهدّئاً يومياً.",sedentary:"جلوسك الطويل يخنق تدفّق الحوض — أضفنا حركة وإطالات.",circulation:"إشارات ضعف الدورة الدموية واضحة — كثّفنا تمارين التدفّق، ونؤكّد: فحص دم بسيط يستحقّ."};
+  ls='<br><br><b>نمط حياتك:</b> '+prof.lifestyle.map(x=>map[x]).filter(Boolean).join(' ');
+ }
+ return '<div class="pp-explain">'+floorTxt[prof.floor]+'<br><br>'+primeTxt[prof.primary]+' '+lvlTxt[prof.level]+ls+'</div>';
+}
+
 const CATCOLOR={"تمرين":"#3fb0a6","تحكّم":"#7c6cd0","غذاء":"#d6a44b","نمط":"#5fc0d6"};
 
 /* ---------- persistence ---------- */
@@ -2407,7 +2711,8 @@ function openGuide(task){
 }
 function closeOverlay(){running=false;clearInterval(tickRef);if(restRef)clearInterval(restRef);releaseAwake();document.getElementById('overlay').classList.remove('show');
  if(returnToSex){returnToSex=false;renderSexScreen();bindSexTasks();document.getElementById('sexOverlay').classList.add('show');}
- if(typeof returnToSexlib!=='undefined'&&returnToSexlib){returnToSexlib=false;renderSexlib();document.getElementById('sexlibOverlay').classList.add('show');}}
+ if(typeof returnToSexlib!=='undefined'&&returnToSexlib){returnToSexlib=false;renderSexlib();document.getElementById('sexlibOverlay').classList.add('show');}
+ if(typeof returnToPlan!=='undefined'&&returnToPlan){returnToPlan=false;renderMyPlan();document.getElementById('planOverlay').classList.add('show');}}
 let returnToSex=false;
 let returnToSexScreen=false;
 function backToSexIfNeeded(){if(returnToSexScreen){returnToSexScreen=false;renderSexScreen();bindSexTasks();document.getElementById('sexOverlay').classList.add('show');return true;}return false;}
@@ -3667,6 +3972,152 @@ function renderScience(){
  if(g('sciBtn'))g('sciBtn').onclick=()=>{renderScience();g('sciOverlay').classList.add('show');};
  if(g('sciBack'))g('sciBack').onclick=()=>g('sciOverlay').classList.remove('show');
 })();
+
+
+/* ===== PREM3: UI ===== */
+/* ============================================================
+   ✦✦✦ التخصيص الشامل — الواجهات ✦✦✦
+   شاشة التقييم العميق + شاشة برنامجي المخصّص + تحليل حيّ اختياري
+   ============================================================ */
+
+/* ---------- شاشة التقييم العميق ---------- */
+function renderDeep(){
+ const b=document.getElementById('deepBody');if(!b)return;
+ const ans=DATA.deepAns||{};let h='';
+ h+='<div class="begintro">'+DEEP.intro+'</div>';
+ h+='<div class="pp-note">'+DEEP.note+'</div>';
+ DEEP.q.forEach((q,qi)=>{
+  h+='<div class="pp-q" data-q="'+q.id+'"><div class="pp-qt"><span class="pp-num">'+(qi+1)+'</span>'+q.t+'</div><div class="pp-opts">';
+  q.a.forEach((a,ai)=>{const on=ans[q.id]===ai;h+='<button class="pp-opt'+(on?' on':'')+'" data-i="'+ai+'">'+a.t+'</button>';});
+  h+='</div></div>';
+ });
+ h+='<button id="deepSubmit" class="pp-submit">احسب برنامجي المخصّص ✨</button>';
+ b.innerHTML=h;
+ b.querySelectorAll('.pp-q').forEach(row=>{const qid=row.dataset.q;
+  row.querySelectorAll('.pp-opt').forEach(bt=>{bt.onclick=()=>{
+   row.querySelectorAll('.pp-opt').forEach(x=>x.classList.remove('on'));bt.classList.add('on');
+   if(!DATA.deepAns)DATA.deepAns={};DATA.deepAns[qid]=parseInt(bt.dataset.i,10);persist();
+  };});});
+ document.getElementById('deepSubmit').onclick=()=>{
+  const answered=DEEP.q.filter(q=>DATA.deepAns&&DATA.deepAns[q.id]!=null).length;
+  if(answered<DEEP.q.length){
+   showBanner('أكمل التقييم','بقيت '+ (DEEP.q.length-answered) +' أسئلة. كل إجابة تزيد دقّة تخصيصك.');
+   const firstMiss=DEEP.q.find(q=>!DATA.deepAns||DATA.deepAns[q.id]==null);
+   if(firstMiss){const el=b.querySelector('[data-q="'+firstMiss.id+'"]');if(el)el.scrollIntoView({behavior:'smooth',block:'center'});}
+   return;
+  }
+  computeDeep();
+  document.getElementById('deepOverlay').classList.remove('show');
+  renderMyPlan();document.getElementById('planOverlay').classList.add('show');
+  showBanner('✨ تمّ التخصيص','أعدنا تشكيل برنامجك بالكامل حسب حالتك.');
+  if(typeof updatePlanBadge==='function')updatePlanBadge();
+ };
+}
+
+/* ---------- شاشة برنامجي المخصّص ---------- */
+function renderMyPlan(){
+ const b=document.getElementById('planBody');if(!b)return;
+ const prof=deepProfile();
+ if(!prof){b.innerHTML='<div class="begintro">لم تُكمل التقييم العميق بعد.</div><button id="planGoAssess" class="pp-submit">ابدأ التقييم الشامل 🧭</button>';
+  const g=document.getElementById('planGoAssess');if(g)g.onclick=()=>{document.getElementById('planOverlay').classList.remove('show');renderDeep();document.getElementById('deepOverlay').classList.add('show');};return;}
+ const floorName={tight:'مشدود (مفرط التوتّر)',weak:'ضعيف',mixed:'مختلط'}[prof.floor];
+ const primeName={pe:'سرعة القذف',ed:'قوة الانتصاب',ctrl:'التحكّم والثقة'}[prof.primary];
+ const lvlName={beg:'مبتدئ',inter:'متوسّط',adv:'متقدّم'}[prof.level];
+ let h='';
+ h+='<div class="pp-hero"><div class="pp-herobig">🧬</div><div class="pp-herotx"><b>ملفّك الشخصي</b>'+
+   '<div class="pp-chips"><span>نمط القاع: '+floorName+'</span><span>الأولوية: '+primeName+'</span><span>المستوى: '+lvlName+'</span></div></div></div>';
+ h+=explainProfile(prof);
+ /* خطة اليوم المخصّصة */
+ const plan=personalDailyPlan(prof);
+ h+='<div class="sexsec">🎯 خطة اليوم المخصّصة لك ('+plan.length+' تمارين)</div>';
+ const fl=DATA.flowLog||{};const done=fl[todayStr()]||{};
+ plan.forEach(k=>{const f=FLOWS[k];if(!f)return;const secs=f.steps.reduce((a,s)=>a+s.t,0);const on=!!done[k];
+  h+='<div class="pp-card'+(on?' done':'')+'" data-flow="'+k+'"><img src="'+anyImg(f.img)+'" loading="lazy"><div class="pp-cardtx"><b>'+(on?'✓ ':'')+f.name+'</b><span>'+f.howto[0]+'</span><em>⏱ ~'+Math.max(1,Math.round(secs/60))+' د · '+f.cat+'</em></div><div class="pp-go">▶</div></div>';});
+ /* مكتبة مرتّبة حسبك */
+ const g=personalizedLib(prof);
+ h+='<div class="sexsec">📚 مكتبتك مرتّبة حسب نمطك</div>';
+ h+='<div class="pp-legend"><span class="pp-tag core">أساسي لك</span><span class="pp-tag good">مفيد</span><span class="pp-tag skip">ليس لنمطك</span></div>';
+ [['core','أساسي لك'],['good','مفيد لك'],['skip','ليس لنمطك الآن']].forEach(([grp,lbl])=>{
+  if(!g[grp].length)return;
+  h+='<div class="pp-grouph '+grp+'">'+lbl+' ('+g[grp].length+')</div>';
+  g[grp].forEach(k=>{const f=FLOWS[k];if(!f)return;const on=!!done[k];
+   h+='<div class="pp-card sm '+grp+(on?' done':'')+'" data-flow="'+k+'"><img src="'+anyImg(f.img)+'" loading="lazy"><div class="pp-cardtx"><b>'+(on?'✓ ':'')+f.name+'</b><em>'+f.cat+'</em></div>'+(grp==='skip'?'<div class="pp-skiptag">تخطَّ</div>':'<div class="pp-go">▶</div>')+'</div>';});
+ });
+ /* تحليل حيّ اختياري */
+ h+='<div class="sexsec">🤖 تحليل أعمق (اختياري)</div>';
+ h+='<div class="pp-ai"><p>تحبّ تحليلاً أعمق مكتوباً خصيصاً لحالتك؟ يحتاج إنترنت. يبقى العمل الأساسي كلّه أوفلاين.</p><button id="aiAnalyzeBtn" class="pp-aibtn">✍️ اكتب تحليلي المخصّص</button><div id="aiResult"></div></div>';
+ h+='<button id="retakeDeep" class="pp-retake">🔄 إعادة التقييم</button>';
+ b.innerHTML=h;
+ /* ربط البطاقات */
+ b.querySelectorAll('.pp-card[data-flow]').forEach(el=>{if(el.classList.contains('skip'))return;el.onclick=()=>{const k=el.dataset.flow;returnToPlan=true;
+   document.getElementById('planOverlay').classList.remove('show');
+   openExercise({id:'pp_'+k,title:FLOWS[k].name,action:'flow:'+k});};});
+ const rt=document.getElementById('retakeDeep');if(rt)rt.onclick=()=>{document.getElementById('planOverlay').classList.remove('show');renderDeep();document.getElementById('deepOverlay').classList.add('show');};
+ const aib=document.getElementById('aiAnalyzeBtn');if(aib)aib.onclick=()=>runAIAnalysis(prof);
+}
+let returnToPlan=false;
+
+/* ---------- التحليل الحيّ (اختياري، عبر الإنترنت) ---------- */
+async function runAIAnalysis(prof){
+ const box=document.getElementById('aiResult');if(!box)return;
+ box.innerHTML='<div class="pp-aiload">✍️ يكتب تحليلك المخصّص… (قد يأخذ لحظات)</div>';
+ const S=prof.scores||{};
+ const summary='نمط القاع: '+prof.floor+' | المحرّك الأساسي: '+prof.primary+' | المستوى: '+prof.level+
+   ' | درجات: سرعة القذف '+S.pe+'، انتصاب '+S.ed+'، تحكّم '+S.ctrl+'، توتّر '+S.stress+'، لياقة/تدفّق '+S.flow+
+   ' | عوامل: '+((prof.lifestyle||[]).join('، ')||'لا شيء بارز')+' | وقت متاح يومياً: مستوى '+prof.time;
+ const prompt='أنت مدرّب لياقة ومختصّ صحة حوض ذكوري، تكتب بالعربية بلهجة عربية واضحة ومحترمة ومحفّزة. '+
+  'بناءً على هذا الملف لرجل عمره 31 موظّف مكتبي في تونس: '+summary+'. '+
+  'اكتب تحليلاً شخصياً مختصراً (150-220 كلمة) يشرح له بوضوح: (1) ماذا يعني نمطه ولماذا، (2) أهمّ 3 أولويات عملية له تحديداً، (3) خطأ شائع يجب أن يتجنّبه لنمطه، (4) توقّع واقعي وصادق للنتائج خلال 8-12 أسبوعاً. '+
+  'كن صادقاً: إن كانت مؤشرات ضعف انتصاب أو دورة دموية واضحة، انصحه بلطف بفحص دم بسيط. لا تعطِ وعوداً مبالغاً بها. لا تكرّر تعليمات التمارين، ركّز على التحليل والتوجيه. اكتب مباشرة بلا مقدّمات.';
+ try{
+  const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},
+   body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1000,messages:[{role:'user',content:prompt}]})});
+  const data=await res.json();
+  const txt=(data.content||[]).map(x=>x.type==='text'?x.text:'').join('\n').trim();
+  if(txt){
+   DATA.aiAnalysis={txt:txt,ts:Date.now()};persist();
+   box.innerHTML='<div class="pp-aitext">'+txt.replace(/\n/g,'<br>')+'</div><div class="pp-aidate">تحليل مخصّص بالذكاء الاصطناعي</div>';
+  }else{box.innerHTML='<div class="pp-aierr">تعذّر توليد التحليل. حاول مجدداً لاحقاً — برنامجك الأساسي يعمل بلا حاجة لهذا.</div>';}
+ }catch(e){
+  box.innerHTML='<div class="pp-aierr">التحليل الحيّ يحتاج اتصال إنترنت وأن يكون التطبيق مستضافاً أونلاين. برنامجك المخصّص كامل يعمل أوفلاين بلا هذا.</div>';
+ }
+}
+
+/* شارة «خصّص برنامجك» إن لم يُكمل التقييم */
+function updatePlanBadge(){var show=deepProfile()?'none':'block';['planDot','planDot2'].forEach(function(id){var d=document.getElementById(id);if(d)d.style.display=show;});}
+
+/* ---------- ربط ---------- */
+(function(){
+ const g=id=>document.getElementById(id);
+ if(g('deepBtn'))g('deepBtn').onclick=()=>{renderDeep();g('deepOverlay').classList.add('show');};
+ if(g('deepBack'))g('deepBack').onclick=()=>g('deepOverlay').classList.remove('show');
+ if(g('planBtn'))g('planBtn').onclick=()=>{renderMyPlan();g('planOverlay').classList.add('show');};
+ if(g('planBack'))g('planBack').onclick=()=>g('planOverlay').classList.remove('show');
+ updatePlanBadge();
+})();
+
+/* اجعل مكتبة الأداء تحترم الملف: رتّب وأضف وسم fit */
+if(typeof renderSexlib==='function'&&!window._libPersonalized){
+ const _origLib=renderSexlib;
+ renderSexlib=function(){
+  const prof=deepProfile();
+  _origLib.apply(this,arguments);
+  if(!prof)return;
+  try{
+   const b=document.getElementById('sexlibBody');if(!b)return;
+   b.querySelectorAll('.libcard').forEach(el=>{
+    const k=el.dataset.flow;const fit=flowFitFor(k,prof);
+    if(fit==='core'){el.classList.add('fit-core');const m=el.querySelector('.libmeta');if(m)m.insertAdjacentHTML('afterbegin','<em class="fitchip core">★ لك</em>');}
+    else if(fit==='skip'){el.classList.add('fit-skip');const m=el.querySelector('.libmeta');if(m)m.insertAdjacentHTML('afterbegin','<em class="fitchip skip">ليس لنمطك</em>');}
+   });
+   /* رفع بطاقة تنبيه أعلى المكتبة */
+   const note=document.createElement('div');note.className='coach';note.style.marginTop='10px';
+   note.innerHTML='<b>مكتبتك مخصّصة:</b> التمارين المعلَّمة <b style="color:var(--accent)">★ لك</b> هي الأنسب لنمطك. افتح «برنامجي المخصّص» لخطة اليوم الكاملة.';
+   const first=b.querySelector('.libcount');if(first&&first.parentNode)first.parentNode.insertBefore(note,first.nextSibling);
+  }catch(e){}
+ };
+ window._libPersonalized=true;
+}
 
 </script>
 <div class="overlay" id="panelOverlay">
