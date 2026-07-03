@@ -499,6 +499,22 @@ button:active{transform:scale(.97);filter:brightness(1.12);}
 #installBar .ib-tx span{display:block;font-size:.72rem;color:var(--mut);margin-top:2px;}
 #installBar button{border:none;border-radius:10px;padding:9px 14px;font-family:inherit;font-weight:800;font-size:.8rem;background:linear-gradient(135deg,#2c6e4a,#3fb0a6);color:#fff;cursor:pointer;white-space:nowrap;}
 
+
+/* ============ ✦✦✦ الطبقة البريميوم+ ✦✦✦ ============ */
+.sci-pillar{display:flex;gap:11px;align-items:flex-start;background:linear-gradient(160deg,#152c44,#10203400);border:1px solid var(--line);border-radius:14px;padding:12px;margin:8px 0;}
+.sci-ic{font-size:1.5rem;flex:0 0 auto;}
+.sci-pillar b{display:block;font-size:.9rem;color:var(--accent);margin-bottom:3px;}
+.sci-pillar span{display:block;font-size:.78rem;color:var(--mut);line-height:1.65;}
+.sci-marker{background:var(--card);border-right:4px solid var(--night);border-radius:11px;padding:11px 13px;margin:7px 0;}
+.sci-marker b{display:block;color:#c9beff;font-size:.85rem;margin-bottom:2px;}
+.sci-marker span{display:block;color:var(--mut);font-size:.78rem;line-height:1.6;}
+.sci-cta{display:flex;align-items:center;gap:11px;background:linear-gradient(135deg,#1b4a55,#13323f);border:1px solid var(--accent);border-radius:15px;padding:14px;margin:14px 0;cursor:pointer;}
+.sci-cta b{display:block;font-size:.92rem;color:var(--accent);}
+.sci-cta span{display:block;font-size:.75rem;color:var(--mut);margin-top:3px;line-height:1.5;}
+.sci-arr{margin-right:auto;color:var(--accent);font-size:1.4rem;}
+.prem-sci{background:linear-gradient(135deg,#2a807a,#5fd6cb)!important;color:#04222b!important;}
+.libcat[style*="5fd6cb"]{box-shadow:0 0 0 1px rgba(95,214,203,.3),0 6px 18px -10px rgba(95,214,203,.5);}
+
 </style></head>
 <body>
 <!-- LOCK SCREEN -->
@@ -544,6 +560,7 @@ button:active{transform:scale(.97);filter:brightness(1.12);}
 <button id="remindBtn" style="width:100%;margin-top:8px;border:1px solid var(--line);border-radius:13px;padding:13px;font-weight:800;font-family:inherit;font-size:.9rem;background:var(--card);color:var(--ink);cursor:pointer;">🔔 التذكيرات</button>
 <div style="display:flex;gap:8px;margin-top:8px;"><button id="exportBtn" style="flex:1;border:1px solid var(--line);border-radius:13px;padding:13px;font-weight:800;font-family:inherit;font-size:.86rem;background:var(--card);color:var(--ink);cursor:pointer;">📤 نسخة احتياطية</button><button id="importBtn" style="flex:1;border:1px solid var(--line);border-radius:13px;padding:13px;font-weight:800;font-family:inherit;font-size:.86rem;background:var(--card);color:var(--ink);cursor:pointer;">📥 استرجاع نسخة</button></div>
 <input type="file" id="importFile" accept=".json,application/json" style="display:none">
+<button id="sciBtn" class="prem-btn prem-sci">🔬 القسم العلمي (بروتوكولات مثبتة + ماذا تتوقّع)</button>
 <button id="weeklyBtn" class="prem-btn prem-weekly">🗓️ تقييمي الأسبوعي (يعدّل برنامجك تلقائياً)<span id="weeklyDot" class="wk-dot"></span></button>
 <button id="voiceBtn" class="prem-btn prem-voice">🔊 الصوت الإرشادي</button>
 <button id="notifyBtn" class="prem-btn prem-notify">🔔 فعّل الإشعارات الحقيقية</button>
@@ -551,7 +568,7 @@ button:active{transform:scale(.97);filter:brightness(1.12);}
 <button id="pinBtn" onclick="window.changePIN&&window.changePIN()" style="width:100%;margin-top:8px;border:1px solid var(--line);border-radius:13px;padding:13px;font-weight:800;font-family:inherit;font-size:.92rem;background:var(--card);color:var(--ink);cursor:pointer;">🔒 تغيير الرمز السرّي</button>
 <button id="panelBtn" style="width:100%;margin-top:8px;border:none;border-radius:13px;padding:14px;font-weight:800;font-family:inherit;font-size:.95rem;background:linear-gradient(135deg,#3a51b0,#6a5fd6);color:#fff;cursor:pointer;">🎛️ لوحة التحكّم (عدّل برنامجك متى شئت)</button>
 <button id="resetBtn" style="width:100%;margin-top:8px;border:1px solid #7a3a36;border-radius:13px;padding:13px;font-weight:800;font-family:inherit;font-size:.92rem;background:#2a1614;color:#ff9b91;cursor:pointer;">🗑️ تفريغ كل البيانات والبدء من جديد</button>
-<div style="text-align:center;margin-top:10px;font-size:.72rem;color:#5a6e80;">نسخة التطبيق: 2026-07 — النسخة البريميوم (تطبيق مثبّت + محرّك ذكي)</div>
+<div style="text-align:center;margin-top:10px;font-size:.72rem;color:#5a6e80;">نسخة التطبيق: 2026-07 — البريميوم+ (علمي + رسوم تشريحية + تقنيات متقدّمة)</div>
 </div>
 
 <div class="progress-top"><div class="pf" id="pf"></div></div>
@@ -580,6 +597,11 @@ button:active{transform:scale(.97);filter:brightness(1.12);}
 </div>
 
 <div id="appBanner"></div>
+<!-- SCIENCE OVERLAY -->
+<div class="overlay" id="sciOverlay">
+  <div class="ov-top"><button class="back" id="sciBack">‹ رجوع</button><div class="ov-title">🔬 القسم العلمي</div><div style="width:64px"></div></div>
+  <div style="overflow-y:auto;padding-bottom:24px;" id="sciBody"></div>
+</div>
 <!-- WEEKLY OVERLAY -->
 <div class="overlay" id="weeklyOverlay">
   <div class="ov-top"><button class="back" id="weeklyBack">‹ رجوع</button><div class="ov-title">🗓️ التقييم الأسبوعي</div><div style="width:64px"></div></div>
@@ -1627,6 +1649,247 @@ Object.assign(EXVIDEOS,{clamshell:"https://www.youtube.com/results?search_query=
 
 /* تحديث نصوص العدّ في المكتبة (صار 17 تمريناً) */
 try{SEXLIB.intro=SEXLIB.intro.replace('13 تمريناً','17 تمريناً');}catch(e){}
+
+
+/* ===== PREM2: ART ===== */
+/* ============================================================
+   ✦✦✦ الطبقة البريميوم+ — رسوم تشريحية احترافية ✦✦✦
+   أجسام مظلّلة بتدرّجات، عضلات مميّزة، أرضية بعمق، إضاءة
+   ============================================================ */
+const ART2=(function(){
+ /* لوحة موحّدة مع تدرّجات وإضاءة */
+ const defs='<defs>'+
+  '<linearGradient id="a2bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16304c"/><stop offset="1" stop-color="#0d1d30"/></linearGradient>'+
+  '<linearGradient id="a2body" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8fe9de"/><stop offset="1" stop-color="#3fb0a6"/></linearGradient>'+
+  '<linearGradient id="a2body2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7ad8ce"/><stop offset="1" stop-color="#2f8f86"/></linearGradient>'+
+  '<radialGradient id="a2musc" cx="0.5" cy="0.4" r="0.7"><stop offset="0" stop-color="#ff9b7a"/><stop offset="1" stop-color="#e0564f"/></radialGradient>'+
+  '<linearGradient id="a2gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0c36a"/><stop offset="1" stop-color="#c8912f"/></linearGradient>'+
+  '<radialGradient id="a2glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="rgba(95,214,203,.25)"/><stop offset="1" stop-color="rgba(95,214,203,0)"/></radialGradient>'+
+  '<filter id="a2sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000" flood-opacity="0.35"/></filter>'+
+  '</defs>';
+ const frame=(inner,glow)=>'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 175">'+defs+
+  '<rect x="1.5" y="1.5" width="257" height="172" rx="16" fill="url(#a2bg)" stroke="#2b4a68"/>'+
+  (glow?'<ellipse cx="'+glow[0]+'" cy="'+glow[1]+'" rx="60" ry="46" fill="url(#a2glow)"/>':'')+
+  '<ellipse cx="130" cy="156" rx="96" ry="9" fill="#0a1522" opacity=".55"/>'+
+  '<line x1="24" y1="150" x2="236" y2="150" stroke="#2c4a68" stroke-width="2.5" stroke-linecap="round"/>'+
+  '<g filter="url(#a2sh)">'+inner+'</g></svg>';
+ /* أجزاء جسم قابلة لإعادة الاستخدام (مظلّلة) */
+ const limb=(x1,y1,x2,y2,w)=>'<line x1="'+x1+'" y1="'+y1+'" x2="'+x2+'" y2="'+y2+'" stroke="url(#a2body)" stroke-width="'+(w||13)+'" stroke-linecap="round"/>';
+ const limb2=(x1,y1,x2,y2,w)=>'<line x1="'+x1+'" y1="'+y1+'" x2="'+x2+'" y2="'+y2+'" stroke="url(#a2body2)" stroke-width="'+(w||13)+'" stroke-linecap="round"/>';
+ const torso=(pts)=>'<path d="'+pts+'" fill="url(#a2body)" stroke="#2f8f86" stroke-width="1.5"/>';
+ const head=(cx,cy,r)=>'<circle cx="'+cx+'" cy="'+cy+'" r="'+(r||15)+'" fill="url(#a2body)" stroke="#2f8f86" stroke-width="1.5"/>'+
+   '<circle cx="'+(cx-4)+'" cy="'+(cy-4)+'" r="4" fill="#eafffb" opacity=".5"/>';
+ const pelvisGlow=(cx,cy)=>'<circle cx="'+cx+'" cy="'+cy+'" r="15" fill="url(#a2musc)" opacity=".92"/><circle cx="'+cx+'" cy="'+cy+'" r="15" fill="none" stroke="#fff" stroke-width="1" opacity=".3"/>';
+ const dumbbell=(x,y,rot,s)=>{s=s||1;return '<g transform="translate('+x+','+y+') rotate('+(rot||0)+') scale('+s+')"><rect x="-14" y="-2.5" width="28" height="5" rx="2" fill="url(#a2gold)"/><rect x="-17" y="-9" width="7" height="18" rx="2.5" fill="url(#a2gold)"/><rect x="10" y="-9" width="7" height="18" rx="2.5" fill="url(#a2gold)"/></g>';};
+ const arrow=(d)=>'<path d="'+d+'" fill="none" stroke="url(#a2gold)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>';
+
+ return {frame,limb,limb2,torso,head,pelvisGlow,dumbbell,arrow};
+})();
+
+/* رسوم تشريحية احترافية تحلّ محلّ البسيطة للتمارين المفتاحية */
+Object.assign(SVGART,{
+ /* كيجل — تشريحي مع إبراز قاع الحوض */
+ kegel:ART2.frame(
+  ART2.head(130,44,16)+
+  ART2.torso('M112 58 Q130 52 148 58 L152 108 Q130 116 108 108 Z')+
+  ART2.limb(116,106,100,146,14)+ART2.limb(144,106,160,146,14)+
+  ART2.pelvisGlow(130,104)+
+  ART2.arrow('M175 104 h26 m-7 -6 l7 6 l-7 6')+
+  '<text x="207" y="107" fill="#ff9b7a" font-size="11" font-family="sans-serif">قاع الحوض</text>',[130,104]),
+ /* الجسر — دفع الورك مع إبراز المؤخرة */
+ bridge:ART2.frame(
+  ART2.head(48,116,15)+
+  '<path d="M60 120 Q116 92 146 108" fill="none" stroke="url(#a2body)" stroke-width="15" stroke-linecap="round"/>'+
+  ART2.limb(146,108,150,132,14)+ART2.limb(150,132,132,146,13)+
+  ART2.pelvisGlow(132,98)+
+  ART2.arrow('M132 74 v-16 m-6 8 l6 -8 l6 8'),[132,100]),
+ /* التنفّس الحجابي — صدر/بطن مع دائرة نفَس */
+ breathing:ART2.frame(
+  ART2.head(130,42,16)+
+  ART2.torso('M110 56 Q130 50 150 56 L156 112 Q130 122 104 112 Z')+
+  '<circle cx="130" cy="92" r="24" fill="none" stroke="#8fe9de" stroke-width="2" stroke-dasharray="4 4" opacity=".8"/>'+
+  '<circle cx="130" cy="92" r="13" fill="url(#a2glow)"/>'+
+  ART2.arrow('M130 66 v-14 m-6 8 l6 -8 l6 8')+
+  '<text x="150" y="96" fill="#8fe9de" font-size="10" font-family="sans-serif">بطن</text>',[130,92]),
+ /* الحوض التشريحي */
+ pelvis:ART2.frame(
+  '<path d="M78 60 Q130 44 182 60 L172 96 Q130 112 88 96 Z" fill="url(#a2body)" stroke="#2f8f86" stroke-width="1.5"/>'+
+  ART2.pelvisGlow(130,84)+
+  '<path d="M100 84 Q130 100 160 84" fill="none" stroke="#fff" stroke-width="2" opacity=".45"/>'+
+  '<text x="130" y="130" fill="#ff9b7a" font-size="11" font-family="sans-serif" text-anchor="middle">عضلة قاع الحوض (PC)</text>',[130,84]),
+ /* تدفّق الدم */
+ bloodflow:ART2.frame(
+  ART2.head(130,42,15)+
+  ART2.torso('M112 56 Q130 50 148 56 L150 104 Q130 112 110 104 Z')+
+  '<path d="M130 104 C150 118 150 132 130 140 C110 132 110 118 130 104 Z" fill="url(#a2musc)" opacity=".85"/>'+
+  '<path d="M92 80 Q130 90 168 80" fill="none" stroke="#ff9b7a" stroke-width="2.5" stroke-dasharray="3 4"/>'+
+  '<path d="M100 96 Q130 106 160 96" fill="none" stroke="#ff9b7a" stroke-width="2.5" stroke-dasharray="3 4"/>'+
+  '<text x="130" y="160" fill="#ff9b7a" font-size="10" font-family="sans-serif" text-anchor="middle">تدفّق الدم للحوض</text>',[130,120])
+});
+
+/* حسّن الرسوم الجديدة السابقة بنسخ تشريحية أنعم للأهمّ */
+Object.assign(SVGART,{
+ dsquat:ART2.frame(
+  ART2.head(112,40,15)+
+  ART2.limb(112,52,108,88,14)+
+  ART2.limb(108,88,84,104,14)+ART2.limb(84,104,88,144,13)+
+  ART2.limb(108,88,132,104,14)+ART2.limb(132,104,128,144,13)+
+  ART2.limb2(112,60,140,74,11)+
+  ART2.pelvisGlow(110,92)+
+  ART2.arrow('M70 46 q12 -16 26 -8'),[110,100]),
+ happybaby:ART2.frame(
+  ART2.head(56,120,15)+
+  '<path d="M68 122 Q100 124 132 122" fill="none" stroke="url(#a2body)" stroke-width="15" stroke-linecap="round"/>'+
+  ART2.limb(132,122,150,92,13)+ART2.limb(150,92,146,64,13)+
+  ART2.limb(132,120,168,100,12)+ART2.limb(168,100,174,72,12)+
+  ART2.limb2(96,116,140,72,10)+ART2.limb2(104,120,168,78,10)+
+  ART2.pelvisGlow(126,116),[120,110]),
+ hw_goblet:ART2.frame(
+  ART2.head(112,36,15)+
+  ART2.limb(112,48,110,86,14)+
+  ART2.limb(110,86,88,104,14)+ART2.limb(88,104,92,144,13)+
+  ART2.limb(110,86,132,104,14)+ART2.limb(132,104,128,144,13)+
+  ART2.limb2(110,54,126,72,10)+ART2.limb2(112,54,98,72,10)+
+  ART2.pelvisGlow(110,94)+
+  ART2.dumbbell(112,72,90,1.0),[110,100]),
+ hw_thrust:ART2.frame(
+  ART2.head(50,110,15)+
+  '<path d="M62 114 Q118 94 150 106" fill="none" stroke="url(#a2body)" stroke-width="15" stroke-linecap="round"/>'+
+  ART2.limb(150,106,150,130,14)+ART2.limb(150,130,132,146,13)+
+  ART2.pelvisGlow(138,102)+
+  '<rect x="122" y="78" width="34" height="12" rx="4" fill="url(#a2gold)"/>'+
+  ART2.dumbbell(128,84,0,.7)+ART2.dumbbell(150,84,0,.7)+
+  ART2.arrow('M138 74 v-14 m-6 8 l6 -8 l6 8'),[138,100]),
+ wallsit:ART2.frame(
+  '<rect x="212" y="30" width="8" height="120" rx="3" fill="#24425f"/>'+
+  ART2.head(192,52,15)+
+  ART2.limb(192,64,192,100,14)+
+  ART2.limb(192,100,132,100,14)+ART2.limb(132,100,132,144,13)+
+  ART2.limb2(192,72,160,92,11)+
+  ART2.pelvisGlow(180,100),[170,96])
+});
+
+/* ===== PREM2: PROTOCOL ===== */
+/* ============================================================
+   ✦✦✦ الطبقة البريميوم+ — البروتوكول العلمي ✦✦✦
+   مبني على أدلّة سريرية منشورة (PLOS ONE 2023، BJGP RCT،
+   ClinicalTrials NCT05517694، Frontiers 2025).
+   المبدأ: ألياف بطيئة (تحمّل) + ألياف سريعة (قوة) + تحكّم
+   بالمصرّة + تنفّس حجابي + تدريب واقفاً للانتصاب.
+   ============================================================ */
+const SCIENCE={
+ intro:"هذا القسم مبني على دراسات سريرية حقيقية في علاج سرعة القذف وضعف الانتصاب. الأدلّة واعدة لكنها متواضعة — النتائج تظهر خلال 8 إلى 12 أسبوعاً مع الالتزام، وأول علامة مبكّرة (خلال 1–4 أسابيع) هي عودة الانتصاب الصباحي/الليلي. الصدق معك أهمّ من الوعود: هذا يساعد كثيرين، لكن الجانب الفيزيولوجي قد يحتاج طبيباً.",
+ pillars:[
+  {ic:"🎯",t:"التمييز قبل القوة",d:"الدراسات تشدّد أن الأهمّ ليس قوة العضلة بل الوعي بها والتحكّم فيها: أن تشدّ قاع الحوض وحده دون البطن أو الفخذ أو المؤخرة، وأن تُرخيه إرادياً. الإرخاء مهمّ كالشدّ."},
+  {ic:"⚙️",t:"نوعا الألياف",d:"قاع الحوض فيه ألياف بطيئة (للتحمّل) وسريعة (للاستجابة اللحظية). البروتوكول العلمي يدرّب الاثنين: إمساك طويل 10 ثوانٍ للتحمّل، وشدّات 1 ثانية للسرعة."},
+  {ic:"🧍",t:"التدريب واقفاً",d:"تجربة سريرية مضبوطة (BJGP) وجدت أن تدريب قاع الحوض واقفاً أقوى أثراً على الانتصاب من الجالس — لأنها الوضعية الوظيفية الحقيقية."},
+  {ic:"🫁",t:"التنفّس الحجابي",d:"3 ثوانٍ شهيق / 7 ثوانٍ زفير (~6 أنفاس بالدقيقة) يفعّل الجهاز المهدّئ ويخفض الإثارة — مُدمج في البروتوكولات كعنصر أساسي لا ثانوي."},
+  {ic:"⏸️",t:"توقّف-ابدأ + تحكّم المصرّة",d:"دراسة PLOS ONE 2023 وجدت أن دمج توقّف-ابدأ مع تدريب التحكّم بالمصرّة أفضل من توقّف-ابدأ وحده. لهذا نجمع بينهما."}
+ ],
+ markers:[
+  {wk:"الأسبوع 1–4",txt:"قد تلاحظ عودة/تحسّن الانتصاب الصباحي — أول علامة مبكّرة على استجابة الأوعية والأعصاب."},
+  {wk:"الأسبوع 4–8",txt:"تحكّم أوضح: قدرة أطول على البقاء قبل نقطة اللاعودة، وثبات انتصاب أفضل."},
+  {wk:"الأسبوع 8–12",txt:"في الدراسات، ارتفع زمن القذف من نصف دقيقة إلى دقيقتين وسطياً — تغيّر ملموس مع الالتزام."}
+ ]
+};
+
+/* بروتوكول الألياف العلمي — قابل للتشغيل بالمؤقّت والصوت */
+const FLOWS_SCI={
+ pf_slow:{name:"الألياف البطيئة — بروتوكول التحمّل (10/10)",img:"kegel",anat:"kegel",cat:"قوة",
+  howto:["البروتوكول السريري: شدّ 10 ثوانٍ / إرخاء 10 ثوانٍ × 10 عدّات","شدّ قاع الحوض وحده — لا بطن، لا فخذ، لا مؤخرة (هذا شرط الدراسات)","نفّس بحرية أثناء الإمساك، لا تحبس نفسك","مرّتين يومياً، 3 أيام أسبوعياً — يبني تحمّل العضلة التي تؤخّر القذف"],
+  steps:(function(){const q=[{k:"rest",t:10,sub:"استلقِ أو اجلس. حدّد عضلة قاع الحوض (نفس عضلة قطع البول). تنفّس بهدوء",lbl:"تهيئة",img:"kegel"}];
+   for(let r=1;r<=10;r++){q.push({k:"hold",t:10,sub:"شدّ ثابت متوسّط-قوي وامسك ("+r+"/10). قاع الحوض فقط. تنفّس بحرية",lbl:"إمساك 10ث",img:"kegel"});q.push({k:"rest",t:10,sub:"إرخاء كامل تام ("+r+"/10). الإرخاء نصف التمرين",lbl:"إرخاء 10ث",img:"kegel"});}
+   q.push({k:"rest",t:8,sub:"انتهيت. أحسنت — هذا بناء تحمّل حقيقي",lbl:"ختام",img:"kegel"});return q;})()},
+
+ pf_fast:{name:"الألياف السريعة — بروتوكول القوة (1/1)",img:"kegel",anat:"kegel",cat:"قوة",
+  howto:["البروتوكول السريري: شدّ 1 ثانية / إرخاء 1 ثانية × 10، ثلاث جولات","يدرّب سرعة استجابة العضلة — سلاحك اللحظي للكبح قبل الذروة","الإرخاء الكامل الفوري بين الشدّات ضروري","مرّتين يومياً مع البطيئة"],
+  steps:(function(){const q=[{k:"rest",t:8,sub:"استعد. حدّد العضلة وتنفّس",lbl:"تهيئة",img:"kegel"}];
+   for(let s=1;s<=3;s++){for(let r=1;r<=10;r++){q.push({k:"hold",t:1,sub:"شدّة سريعة قوية "+r+"/10",lbl:"شدّ ⚡",img:"kegel"});q.push({k:"rest",t:1,sub:"إرخاء فوري",lbl:"ارخِ",img:"kegel"});}q.push({k:"rest",t:s<3?12:8,sub:s<3?("جولة "+s+" تمّت — راحة"):"ختام. سرعة استجابتك تحسّنت",lbl:s<3?"راحة":"ختام",img:"kegel"});}return q;})()},
+
+ pf_standing:{name:"قاع الحوض واقفاً (بروتوكول الانتصاب)",img:"wallsit",anat:"kegel",cat:"تدفّق",
+  howto:["تجربة BJGP: التدريب واقفاً أقوى أثراً على الانتصاب من الجالس","قف مستقيماً، قدماك بعرض الكتفين","اشدّ قاع الحوض كأنك ترفع القضيب وتمنع الريح معاً — سترى ارتفاعاً خفيفاً للقضيب/الصفن","امسك 5 ثوانٍ ثم أرخِ — هذه الوضعية الوظيفية الحقيقية"],
+  steps:(function(){const q=[{k:"rest",t:8,sub:"قف مستقيماً ومسترخي الكتفين. حدّد قاع الحوض",lbl:"تهيئة",img:"wallsit"}];
+   for(let s=1;s<=2;s++){for(let r=1;r<=10;r++){q.push({k:"hold",t:5,sub:"واقفاً: اشدّ وارفع 5 ثوانٍ ("+r+"/10). راقب ارتفاع القضيب/الصفن",lbl:"شدّ واقفاً",img:"wallsit"});q.push({k:"rest",t:5,sub:"إرخاء كامل",lbl:"إرخاء",img:"wallsit"});}q.push({k:"rest",t:s<2?15:8,sub:s<2?"جولة تمّت — تمشَّ قليلاً":"ختام. هذه أفضل وضعية لأثر الانتصاب",lbl:s<2?"راحة":"ختام",img:"hip_rest"});}return q;})()},
+
+ breath_diaphragm:{name:"التنفّس الحجابي العلمي (3/7)",img:"breathing",anat:"breath",cat:"تحكّم",
+  howto:["البروتوكول السريري: شهيق 3 ثوانٍ / زفير 7 ثوانٍ (~6 أنفاس بالدقيقة)","يرتفع بطنك لا صدرك مع الشهيق — تنفّس حجابي حقيقي","الزفير الطويل يفعّل الجهاز المهدّئ (الباراسمبثاوي) الذي يؤخّر القذف ويحسّن الانتصاب","10 أنفاس على الأقل، 3 مرّات يومياً"],
+  steps:(function(){const q=[{k:"rest",t:8,sub:"استلقِ، يد على بطنك. سيرتفع البطن لا الصدر",lbl:"تهيئة",img:"breathing"}];
+   for(let r=1;r<=10;r++){q.push({k:"inhale",t:3,sub:"شهيق حجابي 3 ثوانٍ — ابسط بطنك ("+r+"/10)",lbl:"شهيق ↑",img:"breathing"});q.push({k:"exhale",t:7,sub:"زفير بطيء 7 ثوانٍ — أفرغ ببطء وأرخِ قاع الحوض",lbl:"زفير ↓",img:"breathing"});}
+   q.push({k:"rest",t:6,sub:"عد لتنفّسك الطبيعي. جهازك المهدّئ مُفعّل",lbl:"ختام",img:"breathing"});return q;})()},
+
+ sphincter_control:{name:"تدريب التحكّم بالمصرّة + توقّف-ابدأ",img:"pelvis",anat:"desens",cat:"تحكّم",
+  howto:["دراسة PLOS ONE 2023: دمج توقّف-ابدأ مع تحكّم المصرّة أفضل من توقّف-ابدأ وحده","حفّز حتى تقترب من نقطة اللاعودة (7–8/10)، ثم توقّف تماماً","عند التوقّف: اشدّ المصرّة (قاع الحوض) بقوة + زفير طويل حتى تهبط الإثارة لـ4","كرّر — كل دورة تدرّب منعكس القذف على التأخّر. مارسه في خصوصية تامّة"],
+  steps:[
+   {k:"rest",t:12,sub:"خصوصية تامّة. استرخِ وتنفّس 3 مرّات عميقة. ابدأ هادئاً",lbl:"تهيئة"},
+   {k:"hold",t:25,sub:"تحفيز متحكّم. اصعد نحو 6/10 وراقب إحساسك بدقّة",lbl:"صعود مراقَب"},
+   {k:"rest",t:15,sub:"توقّف! اشدّ المصرّة بقوة + زفير 7 ثوانٍ. انزل لـ4",lbl:"كبح المصرّة"},
+   {k:"hold",t:25,sub:"استأنف. اصعد نحو 7/10 — منطقة التحكّم",lbl:"منطقة التحكّم"},
+   {k:"rest",t:18,sub:"توقّف قبل اللاعودة! اشدّ المصرّة + 3 أنفاس حجابية",lbl:"كبح حاسم"},
+   {k:"hold",t:25,sub:"استأنف. تدرّب على البقاء عند 7 دون تجاوز — هنا يُبنى التحكّم",lbl:"ترسيخ"},
+   {k:"rest",t:15,sub:"توقّف. ازفر ببطء وأرخِ كل جسمك. انزل لـ3",lbl:"تهدئة عميقة"},
+   {k:"hold",t:20,sub:"جولة أخيرة بوعي كامل للإحساس والتنفّس",lbl:"وعي كامل"},
+   {k:"rest",t:12,sub:"انتهِ بالكبح لا بالقذف. هكذا يتدرّب المنعكس",lbl:"ختام"}]}
+};
+/* ادمج البروتوكول العلمي في المكتبة كتصنيف خامس مميّز */
+Object.assign(FLOWS,FLOWS_SCI);
+SEXLIB.cats.unshift({key:"علمي",icon:"🔬",color:"#5fd6cb",desc:"بروتوكولات مبنية على دراسات سريرية — ابدأ من هنا",items:["pf_slow","pf_fast","pf_standing","breath_diaphragm","sphincter_control"]});
+try{SEXLIB.intro="⭐ يبدأ بالقسم العلمي (بروتوكولات مثبتة سريرياً)، ثم "+SEXLIB.intro.replace('17 تمريناً','22 تمريناً');}catch(e){}
+
+/* ===== PREM2: ADVANCED ===== */
+/* ============================================================
+   ✦✦✦ الطبقة البريميوم+ — التقنيات المتقدّمة ✦✦✦
+   تمارين لمستوى أعلى: سلّم الإثارة، الإرخاء العكسي،
+   التحمّل الأقصى، ونمط التنفّس-الشدّ المتزامن
+   ============================================================ */
+Object.assign(FLOWS,{
+ edging_ladder:{name:"سلّم الإثارة المتدرّج (تحكّم متقدّم)",img:"pelvis",anat:"desens",cat:"تحكّم",
+  howto:["تقنية متقدّمة لرفع «عتبة اللاعودة» تدريجياً","اصعد لمستوى محدّد من الإثارة، اثبت عنده بالتنفّس والكبح، ثم انزل — كالسلّم","كل درجة أعلى تدرّب جهازك على تحمّل إثارة أكبر دون فقدان السيطرة","الهدف: البقاء أطول عند المستويات العالية (7-8) دون تجاوزها. خصوصية تامّة"],
+  steps:[
+   {k:"rest",t:10,sub:"خصوصية تامّة. استرخِ وتنفّس حجابياً 3 مرّات",lbl:"تهيئة"},
+   {k:"hold",t:20,sub:"اصعد للمستوى 4/10 واثبت. راقب بدقّة",lbl:"درجة 4"},
+   {k:"rest",t:10,sub:"اكبح قليلاً: شدّ مصرّة + زفير. ابقَ عند 4",lbl:"تثبيت 4"},
+   {k:"hold",t:20,sub:"اصعد للمستوى 5/10 واثبت",lbl:"درجة 5"},
+   {k:"rest",t:10,sub:"تثبيت عند 5 بالتنفّس",lbl:"تثبيت 5"},
+   {k:"hold",t:22,sub:"اصعد للمستوى 6/10 — ابقَ واعياً",lbl:"درجة 6"},
+   {k:"rest",t:12,sub:"اكبح للحفاظ على 6 دون صعود",lbl:"تثبيت 6"},
+   {k:"hold",t:22,sub:"اصعد بحذر للمستوى 7/10 — منطقة الخطر",lbl:"درجة 7"},
+   {k:"rest",t:15,sub:"كبح قوي: مصرّة + 3 أنفاس. انزل لـ4",lbl:"هبوط متحكّم"},
+   {k:"hold",t:18,sub:"جولة أخيرة: اصعد لـ6 وابقَ بثبات",lbl:"ترسيخ"},
+   {k:"rest",t:12,sub:"انتهِ بالكبح لا القذف. رفعت عتبتك اليوم",lbl:"ختام"}]},
+
+ reverse_kegel:{name:"الإرخاء العكسي (للقاع المشدود)",img:"pelvis",anat:"kegel",cat:"إرخاء",
+  howto:["نصف الرجال مشكلتهم قاع حوض مشدود دائماً (مفرط التوتّر) لا ضعيف — والشدّ يفاقم القذف السريع","الإرخاء العكسي: بدل الشدّ، ادفع/وسّع قاع الحوض للأسفل بلطف كأنك تُخرج ريحاً برفق","يُطيل ويُرخي العضلة المتوتّرة — علاج مضادّ تماماً للكيجل العادي","إن كان نمطك «مشدوداً» (من التقييم)، هذا تمرينك الأهمّ لا الكيجل"],
+  steps:(function(){const q=[{k:"rest",t:10,sub:"استلقِ مسترخياً تماماً. تنفّس حجابياً عميقاً",lbl:"تهيئة",img:"pelvis"}];
+   for(let r=1;r<=8;r++){q.push({k:"exhale",t:6,sub:"مع الزفير: ادفع قاع الحوض للأسفل ووسّعه برفق ("+r+"/8)",lbl:"توسيع ↓",img:"pelvis"});q.push({k:"inhale",t:4,sub:"شهيق هادئ، عد للحياد دون شدّ",lbl:"حياد",img:"pelvis"});}
+   q.push({k:"rest",t:10,sub:"استرخاء نهائي. قاعك المتوتّر ارتخى",lbl:"ختام",img:"pelvis"});return q;})()},
+
+ max_endurance:{name:"التحمّل الأقصى (إمساك طويل متدرّج)",img:"kegel",anat:"kegel",cat:"قوة",
+  howto:["تقنية متقدّمة لبناء تحمّل قصوى: إمساك يطول تدريجياً 10→15→20 ثانية","العضلة القوية المتحمّلة = تحكّم أطول قبل القذف وانتصاب أثبت","إرخاء كامل يساوي الإمساك زمنياً — لا اختصار","لا تشدّ البطن أو الفخذ، تنفّس بحرية طوال الإمساك"],
+  steps:[
+   {k:"rest",t:10,sub:"حدّد العضلة. تنفّس بهدوء واستعد لإمساك طويل",lbl:"تهيئة",img:"kegel"},
+   {k:"hold",t:10,sub:"إمساك 10 ثوانٍ — ثابت وقوي، تنفّس بحرية",lbl:"إمساك 10ث",img:"kegel"},
+   {k:"rest",t:10,sub:"إرخاء كامل 10 ثوانٍ",lbl:"إرخاء",img:"kegel"},
+   {k:"hold",t:15,sub:"إمساك 15 ثانية — قاوم الارتخاء المبكّر",lbl:"إمساك 15ث",img:"kegel"},
+   {k:"rest",t:12,sub:"إرخاء كامل",lbl:"إرخاء",img:"kegel"},
+   {k:"hold",t:20,sub:"إمساك 20 ثانية — أقصى تحمّل، حافظ على النقاء",lbl:"إمساك 20ث",img:"kegel"},
+   {k:"rest",t:12,sub:"إرخاء عميق",lbl:"إرخاء",img:"kegel"},
+   {k:"hold",t:15,sub:"إمساك 15 ثانية أخير",lbl:"إمساك 15ث",img:"kegel"},
+   {k:"rest",t:10,sub:"انتهيت. بنيت تحمّلاً حقيقياً اليوم",lbl:"ختام",img:"kegel"}]},
+
+ sync_breath_squeeze:{name:"التزامن: شدّ مع الزفير (مهارة الواقع)",img:"breathing",anat:"desens",cat:"تحكّم",
+  howto:["المهارة التي ستستعملها فعلاً في العلاقة: ربط الكبح بالزفير تلقائياً","عند اقتراب الذروة في الواقع: زفير طويل + شدّ مصرّة في نفس اللحظة","هذا التمرين يبرمج التزامن حتى يصير انعكاساً لا تفكيراً","تدرّب عليه حتى يصبح تلقائياً — عندها تملك سلاحاً فورياً"],
+  steps:(function(){const q=[{k:"rest",t:8,sub:"استرخِ. سنربط الزفير بالكبح حتى يصيرا حركة واحدة",lbl:"تهيئة",img:"breathing"}];
+   for(let r=1;r<=10;r++){q.push({k:"hold",t:6,sub:"ازفر ببطء 6 ثوانٍ + اشدّ المصرّة بقوة في نفس اللحظة ("+r+"/10)",lbl:"زفير+شدّ",img:"breathing"});q.push({k:"inhale",t:4,sub:"شهيق هادئ، أرخِ تماماً",lbl:"شهيق+ارخِ",img:"breathing"});}
+   q.push({k:"rest",t:8,sub:"صار التزامن أوضح. كرّره حتى يصير انعكاساً",lbl:"ختام",img:"breathing"});return q;})()}
+});
+/* أضِفها للتصنيفات المناسبة في المكتبة */
+(function(){
+ const find=k=>SEXLIB.cats.find(c=>c.key===k);
+ if(find('تحكّم'))find('تحكّم').items.push('edging_ladder','sync_breath_squeeze');
+ if(find('إرخاء'))find('إرخاء').items.push('reverse_kegel');
+ if(find('قوة'))find('قوة').items.push('max_endurance');
+ try{SEXLIB.intro=SEXLIB.intro.replace('22 تمريناً','26 تمريناً');}catch(e){}
+})();
 
 const CATCOLOR={"تمرين":"#3fb0a6","تحكّم":"#7c6cd0","غذاء":"#d6a44b","نمط":"#5fc0d6"};
 
@@ -3379,6 +3642,30 @@ function importBackup(file){
 
  try{if(window.PWA)PWA.init();}catch(e){}
  setTimeout(()=>{try{if(typeof updateWeeklyBadge==='function')updateWeeklyBadge();}catch(e){}},900);
+})();
+
+
+/* ===== PREM2: UI ===== */
+/* ============================================================
+   ✦✦✦ الطبقة البريميوم+ — شاشة العلم والربط ✦✦✦
+   ============================================================ */
+function renderScience(){
+ const b=document.getElementById('sciBody');if(!b)return;let h='';
+ h+='<div class="begintro">'+SCIENCE.intro+'</div>';
+ h+='<div class="sexsec">🧬 المبادئ الخمسة (من الدراسات)</div>';
+ SCIENCE.pillars.forEach(p=>{h+='<div class="sci-pillar"><div class="sci-ic">'+p.ic+'</div><div><b>'+p.t+'</b><span>'+p.d+'</span></div></div>';});
+ h+='<div class="sexsec">📅 ماذا تتوقّع ومتى</div>';
+ SCIENCE.markers.forEach(m=>{h+='<div class="sci-marker"><b>'+m.wk+'</b><span>'+m.txt+'</span></div>';});
+ h+='<div class="sci-cta" onclick="renderSexlib();document.getElementById(\'sexlibOverlay\').classList.add(\'show\');">'+
+   '<div><b>🔬 ابدأ البروتوكول العلمي</b><span>5 تمارين مبنية على الأدلّة في مكتبة الأداء — قسم «علمي»</span></div><div class="sci-arr">›</div></div>';
+ h+='<div class="coach" style="margin-top:14px"><b>ملاحظة صدق:</b> الأدلّة على هذه التمارين حقيقية لكنها متواضعة (دراسات صغيرة). تساعد كثيرين، لكن إن استمرّ ضعف الانتصاب أو الطاقة رغم الالتزام 8–12 أسبوعاً، فحص دم بسيط (تستوستيرون، سكّر، دهون، غدّة درقية) في مستشفى عمومي يكشف أسباباً شائعة وقابلة للعلاج. هذا ليس فشلاً — بل ذكاء.</div>';
+ b.innerHTML=h;
+}
+
+(function(){
+ const g=id=>document.getElementById(id);
+ if(g('sciBtn'))g('sciBtn').onclick=()=>{renderScience();g('sciOverlay').classList.add('show');};
+ if(g('sciBack'))g('sciBack').onclick=()=>g('sciOverlay').classList.remove('show');
 })();
 
 </script>
