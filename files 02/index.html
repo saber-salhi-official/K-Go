@@ -691,25 +691,6 @@ img.zoomable,.libcard img,.hwex img,.pp-card img{cursor:zoom-in;}
 .td-card em{font-style:normal;display:block;font-size:.62rem;color:var(--accent);margin-top:2px;}
 .td-cta{background:linear-gradient(135deg,#3a2350,#2a3a6e);border:1px solid #7c6cd0;border-radius:14px;padding:13px;margin-top:10px;font-size:.82rem;color:#c9beff;font-weight:700;cursor:pointer;line-height:1.6;}
 
-
-/* ============ ✦ الدليل الكامل ✦ ============ */
-.gd-sec{font-weight:800;font-size:.92rem;color:var(--accent);margin:18px 0 8px;padding-right:9px;border-right:3px solid var(--accent);}
-.gd-ol{margin:0;padding-right:22px;font-size:.84rem;line-height:1.85;color:var(--ink);}
-.gd-ol li{margin:6px 0;}
-.gd-ul{margin:0;padding-right:20px;font-size:.83rem;line-height:1.85;color:var(--ink);}
-.gd-btn{display:flex;gap:11px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:13px;padding:11px 13px;margin:7px 0;}
-.gd-ic{font-size:1.35rem;flex:0 0 auto;}
-.gd-btn b{display:block;font-size:.86rem;color:var(--ink);}
-.gd-btn span{display:block;font-size:.76rem;color:var(--mut);margin-top:3px;line-height:1.6;}
-.gd-faq{background:var(--card);border:1px solid var(--line);border-radius:13px;margin:7px 0;overflow:hidden;}
-.gd-q{padding:12px 13px;font-weight:800;font-size:.85rem;color:#c9beff;cursor:pointer;position:relative;}
-.gd-q::after{content:"▾";position:absolute;left:13px;color:var(--mut);transition:transform .25s;}
-.gd-faq.open .gd-q::after{transform:rotate(180deg);}
-.gd-a{max-height:0;overflow:hidden;transition:max-height .3s ease;padding:0 13px;font-size:.81rem;color:var(--ink);line-height:1.75;}
-.gd-faq.open .gd-a{max-height:300px;padding-bottom:12px;}
-.gd-seal{background:linear-gradient(150deg,#1b3450,#12263c);border:1px solid var(--gold);border-radius:16px;padding:15px;margin:18px 0 6px;font-size:.85rem;line-height:1.85;color:var(--ink);box-shadow:0 8px 24px -12px rgba(214,164,75,.5);}
-.prem-guide{background:linear-gradient(135deg,#4a5568,#718096)!important;}
-
 </style></head>
 <body>
 <!-- LOCK SCREEN -->
@@ -755,7 +736,6 @@ img.zoomable,.libcard img,.hwex img,.pp-card img{cursor:zoom-in;}
 <button id="remindBtn" style="width:100%;margin-top:8px;border:1px solid var(--line);border-radius:13px;padding:13px;font-weight:800;font-family:inherit;font-size:.9rem;background:var(--card);color:var(--ink);cursor:pointer;">🔔 التذكيرات</button>
 <div style="display:flex;gap:8px;margin-top:8px;"><button id="exportBtn" style="flex:1;border:1px solid var(--line);border-radius:13px;padding:13px;font-weight:800;font-family:inherit;font-size:.86rem;background:var(--card);color:var(--ink);cursor:pointer;">📤 نسخة احتياطية</button><button id="importBtn" style="flex:1;border:1px solid var(--line);border-radius:13px;padding:13px;font-weight:800;font-family:inherit;font-size:.86rem;background:var(--card);color:var(--ink);cursor:pointer;">📥 استرجاع نسخة</button></div>
 <input type="file" id="importFile" accept=".json,application/json" style="display:none">
-<button id="guideBtn2" class="prem-btn prem-guide">📖 الدليل الكامل (كل زر، كل سؤال، وما بعد البرنامج)</button>
 <button id="chatBtn" class="prem-btn prem-chat">💬 اسأل كابتن صابر (دردشة ذكية تعرف بياناتك)</button>
 <button id="docBtn" class="prem-btn prem-doc">🩺 طبيب الفريق (علامات حمراء + فحوصات + حقائق)</button>
 <button id="coachBtn" class="prem-btn prem-coach">🧠 مدرّبي الذكي اليومي (يحلّل أداءك ويعدّل برنامجك)</button>
@@ -769,7 +749,7 @@ img.zoomable,.libcard img,.hwex img,.pp-card img{cursor:zoom-in;}
 <button id="pinBtn" onclick="window.changePIN&&window.changePIN()" style="width:100%;margin-top:8px;border:1px solid var(--line);border-radius:13px;padding:13px;font-weight:800;font-family:inherit;font-size:.92rem;background:var(--card);color:var(--ink);cursor:pointer;">🔒 تغيير الرمز السرّي</button>
 <button id="panelBtn" style="width:100%;margin-top:8px;border:none;border-radius:13px;padding:14px;font-weight:800;font-family:inherit;font-size:.95rem;background:linear-gradient(135deg,#3a51b0,#6a5fd6);color:#fff;cursor:pointer;">🎛️ لوحة التحكّم (عدّل برنامجك متى شئت)</button>
 <button id="resetBtn" style="width:100%;margin-top:8px;border:1px solid #7a3a36;border-radius:13px;padding:13px;font-weight:800;font-family:inherit;font-size:.92rem;background:#2a1614;color:#ff9b91;cursor:pointer;">🗑️ تفريغ كل البيانات والبدء من جديد</button>
-<div style="text-align:center;margin-top:10px;font-size:.72rem;color:#5a6e80;">نسخة التطبيق: 2026-07 — النسخة الختامية المكتملة ✅ (مستقلّة تماماً)</div>
+<div style="text-align:center;margin-top:10px;font-size:.72rem;color:#5a6e80;">نسخة التطبيق: 2026-07 — MONSTER FINAL (لوحة اليوم + شرح كامل لكل تمرين)</div>
 </div>
 
 <div class="progress-top"><div class="pf" id="pf"></div></div>
@@ -799,11 +779,6 @@ img.zoomable,.libcard img,.hwex img,.pp-card img{cursor:zoom-in;}
 </div>
 
 <div id="appBanner"></div>
-<!-- FULL GUIDE OVERLAY -->
-<div class="overlay" id="guideOv">
-  <div class="ov-top"><button class="back" id="guideOvBack">‹ رجوع</button><div class="ov-title">📖 الدليل الكامل</div><div style="width:64px"></div></div>
-  <div style="overflow-y:auto;padding-bottom:24px;" id="guideOvBody"></div>
-</div>
 <!-- CHAT OVERLAY -->
 <div class="overlay" id="chatOverlay">
   <div class="ov-top"><button class="back" id="chatBack">‹ رجوع</button><div class="ov-title">💬 كابتن صابر</div><div style="width:64px"></div></div>
@@ -5103,73 +5078,6 @@ setInterval(renderDash,30000);
  var _o=finishExercise;
  finishExercise=function(){var r=_o.apply(this,arguments);try{setTimeout(renderDash,300);}catch(e){}return r;};
  window._dashWrapped=true;
-})();
-
-
-/* ===== P9: FULL GUIDE ===== */
-/* ============================================================
-   ✦ الدليل الكامل — استقلالية تامة عن أي مساعدة خارجية ✦
-   ============================================================ */
-const GUIDE={
- intro:"هذا دليلك الكامل. كل سؤال يمكن أن يخطر ببالك — جوابه هنا. التطبيق مكتمل ومختوم: لا تحتاج أحداً بعد اليوم.",
- daily:{t:"📅 يومك المثالي (الحد الأدنى ≈ 15 دقيقة)",items:[
-  "الصباح: افتح التطبيق — لوحة اليوم تستقبلك بتمارينك المخصّصة. اعمل «الألياف البطيئة» + «السريعة» (10 د).",
-  "وسط النهار (المكتب): «مضخّة السمانة» أو «تحرير الرقبة» — دقيقتان يكسران الجلوس.",
-  "المساء: تمرين الإرخاء من بطاقاتك (قرفصاء عميقة/طفل سعيد) + «4-7-8» قبل النوم.",
-  "مرّتان أسبوعياً: جلسة تحكّم (توقّف-ابدأ/سلّم الإثارة) في خصوصية.",
-  "3-4 أيام أسبوعياً: يوم دمبل من برنامجك A/B/C/D وسجّل أوزانك.",
-  "الأحد: التقييم الأسبوعي 🗓️ — يعدّل برنامجك تلقائياً."]},
- buttons:[
-  {ic:"🏠",t:"لوحة اليوم (الشاشة الرئيسية)",d:"سلسلتك + دفعة مدرّبك + 3 تمارين مخصّصة لك اليوم. ابدأ دائماً من هنا."},
-  {ic:"🧬",t:"خصّص برنامجي",d:"التقييم الشامل (17 سؤالاً). أعده فقط إذا تغيّرت حالتك جذرياً (كل 6-8 أسابيع مثلاً)."},
-  {ic:"🎯",t:"برنامجي المخصّص",d:"خطتك اليومية + مكتبتك مرتّبة: أساسي لك ★ / مفيد / ليس لنمطك."},
-  {ic:"🧰",t:"مكتبة الأداء",d:"الـ36 تمريناً كاملة بالمؤقّت والصوت. القسم «علمي 🔬» هو الأساس."},
-  {ic:"🏋️",t:"أوزان المنزل",d:"4 أيام دمبل + سجّل وزنك وتكراراتك تحت كل تمرين — التطبيق يقولك متى تزيد."},
-  {ic:"🧠",t:"مدرّبي الذكي",d:"يحلّل أرقامك ويعدّل شدّتك. شغّله يومياً أو دعه يعمل تلقائياً عند الفتح."},
-  {ic:"💬",t:"كابتن صابر",d:"اسأله أي شيء — يعرف بياناتك. (يحتاج إنترنت + استضافة)."},
-  {ic:"🩺",t:"طبيب الفريق",d:"العلامات الحمراء + قائمة تحليل الدم. اقرأه مرّة الآن، وارجع له عند الشك."},
-  {ic:"🔬",t:"القسم العلمي",d:"لماذا هذه التمارين + ماذا تتوقّع ومتى (خارطة 1-4 / 4-8 / 8-12 أسبوعاً)."},
-  {ic:"🗓️",t:"التقييم الأسبوعي",d:"5 أسئلة كل أحد — يضبط الشدّة ويعطيك تركيز الأسبوع."},
-  {ic:"📊",t:"الإحصائيات والأوسمة",d:"سلسلتك، مخططاتك، خريطتك الحرارية، أوسمتك. مرآة تقدّمك."},
-  {ic:"🔔",t:"التذكيرات + الإشعارات",d:"داخل التطبيق دائماً؛ وإشعارات حقيقية وهو مغلق بعد الاستضافة (ملف طريقة-التثبيت)."},
-  {ic:"📤",t:"نسخة احتياطية",d:"صدّرها كل أسبوعين واحفظها (تيليغرام المحفوظات). عند تغيير الهاتف: 📥 استرجاع."},
-  {ic:"🔊",t:"الصوت الإرشادي",d:"صوت يرافقك في كل مرحلة. شغّله/أوقفه من نفس الزر."}],
- faq:[
-  {q:"فوّتّ يوماً (أو أياماً)؟",a:"لا جلد ذات ولا تعويض مضاعف. ارجع بتمرين واحد صغير اليوم — السلسلة الجديدة تبدأ الآن. الانقطاع أسبوعاً لا يمحو ما بنيته."},
-  {q:"متى أزيد وزن الدمبل؟",a:"التطبيق يقولها لك تحت التمرين: 3 جلسات بنفس الوزن وبأعلى التكرارات → 🚀 زد 1-2.5 كغ. لا تزد قبلها."},
-  {q:"تمارين الكيجل صارت سهلة؟",a:"قيّمها «سهل 😌» بعد التمرين 3 مرّات — الشدّة ترتفع تلقائياً. أو انتقل لـ«التحمّل الأقصى» و«المزيج»."},
-  {q:"لا أحسّ بعضلة قاع الحوض؟",a:"جرّب مرة واحدة قطع تيار البول في منتصفه (للتحديد فقط، لا تكرّرها كتمرين) — تلك هي. ثم تمرين «إمالة الحوض» يبني الوعي بها."},
-  {q:"أشدّ بطني/فخذي مع الكيجل؟",a:"ضع يداً على بطنك أثناء التمرين — يجب أن تبقى ساكنة. خفّف قوة الشدّ 50%: تمييز نظيف بقوة أقل خير من شدّ قوي ملوّث."},
-  {q:"متى أذهب للطبيب فعلاً؟",a:"حالتان: علامة حمراء من قائمة 🩺 (فوراً)، أو التزام 8-12 أسبوعاً كاملاً بلا أي تحسّن (تحليل الدم). غير ذلك: استمرّ."},
-  {q:"هاتف جديد؟",a:"القديم: 📤 نسخة احتياطية → احفظ الملف. الجديد: انسخ التطبيق + 📥 استرجاع. كل شيء يعود."},
-  {q:"الإشعارات لا تصل والتطبيق مغلق؟",a:"طبيعي في الملف المحلي. الحل النهائي: استضافة مجانية مرّة واحدة (ملف «طريقة-التثبيت»، 3 دقائق) ثم فعّل 🔔 الإشعارات الحقيقية."},
-  {q:"أشعر بألم (لا حرقاً عضلياً)؟",a:"الألم الحادّ إشارة توقّف — أوقف التمرين المسبّب، والباقي مستمرّ. ألم يتكرّر = طبيب."},
-  {q:"متى أعيد التقييم الشامل 🧬؟",a:"كل 6-8 أسابيع، أو عند تغيّر كبير (تحسّن واضح/ظرف جديد). البرنامج يُعاد تشكيله تلقائياً."}],
- after13:{t:"🏁 بعد الأسبوع 13 — وضع الصيانة مدى الحياة",items:[
-  "قاع الحوض كأي عضلة: يُصان بأقل من بنائه. 3 أيام أسبوعياً (بطيء+سريع) تحفظ كل مكاسبك.",
-  "الدمبل: استمرّ بالتدرّج — العضل مشروع سنوات ممتعة، لا 13 أسبوعاً.",
-  "أبقِ «4-7-8» والإرخاء عادة يومية — التوتّر لا يتقاعد.",
-  "راقب مؤشرك المجاني (الانتصاب الصباحي) — تراجعه المستمرّ لاحقاً = راجع نومك ووزنك، ثم الطبيب.",
-  "أعد التقييم الشامل كل 2-3 أشهر ليبقى البرنامج على مقاسك."]},
- seal:"✅ هذا التطبيق مكتمل: 36 تمريناً مشروحاً بالكامل، برنامج دمبل بالتدرّج، بروتوكولات سريرية، تخصيص شامل، مدرّب ذكي، دردشة، طبيب فريق، إحصائيات، تذكيرات، ونسخ احتياطي — ومُختبَر آلياً حتى النخاع. لا ينقصه شيء لهدفك. الباقي: أنت × 12 أسبوعاً. بالتوفيق يا بطل 🤝"
-};
-function renderGuide(){
- var b=document.getElementById('guideOvBody');if(!b)return;var h='';
- h+='<div class="begintro">'+GUIDE.intro+'</div>';
- h+='<div class="gd-sec">'+GUIDE.daily.t+'</div><ol class="gd-ol">'+GUIDE.daily.items.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ol>';
- h+='<div class="gd-sec">🗺️ خريطة كل زر في التطبيق</div>';
- GUIDE.buttons.forEach(function(x){h+='<div class="gd-btn"><span class="gd-ic">'+x.ic+'</span><div><b>'+x.t+'</b><span>'+x.d+'</span></div></div>';});
- h+='<div class="gd-sec">❓ أسئلة ستخطر ببالك — وأجوبتها</div>';
- GUIDE.faq.forEach(function(x){h+='<div class="gd-faq"><div class="gd-q">'+x.q+'</div><div class="gd-a">'+x.a+'</div></div>';});
- h+='<div class="gd-sec">'+GUIDE.after13.t+'</div><ul class="gd-ul">'+GUIDE.after13.items.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul>';
- h+='<div class="gd-seal">'+GUIDE.seal+'</div>';
- b.innerHTML=h;
- b.querySelectorAll('.gd-faq .gd-q').forEach(function(q){q.onclick=function(){q.parentNode.classList.toggle('open');};});
-}
-(function(){
- var g=function(id){return document.getElementById(id);};
- if(g('guideBtn2'))g('guideBtn2').onclick=function(){renderGuide();g('guideOv').classList.add('show');};
- if(g('guideOvBack'))g('guideOvBack').onclick=function(){g('guideOv').classList.remove('show');};
 })();
 
 </script>
